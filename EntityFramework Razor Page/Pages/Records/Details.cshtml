@@ -1,0 +1,31 @@
+﻿@page
+@model EntityFramework_Razor_Page.Pages.Records.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Userr</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Userr.userAccount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Userr.userAccount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Userr.userPassword)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Userr.userPassword)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Userr.userId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
